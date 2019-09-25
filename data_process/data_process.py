@@ -26,13 +26,14 @@ def read_tsv(file):
 #         i +=1
 #         print(i)
 ##################################################################
-lines = read_tsv('./data.tsv')
-i = 0
-j = 0
-s = set()
-for row in lines:
-    s.add(row[0])
-print(s)
+# lines = read_tsv('./data.tsv')
+# i = 0
+# j = 0
+# s = set()
+# for row in lines:
+#     s.add(row[0])
+# print(s)
+
 # with open('data_final.tsv','w') as f:
 #     for row in lines:
 #         if row[0]=='正常':
@@ -76,3 +77,20 @@ print(s)
 #             j +=1
 #         i +=1
 #         print(i)
+lines = read_tsv('../data_dir/test_all.tsv')
+
+i = 0
+with open('data.tsv','w') as f:
+
+    for row in lines:
+        # print(row)
+        if len(row)==2:
+            s = '\n'+'\t'+str(row[1])
+            if i ==0:
+                f.write('txt')
+            else:
+                f.write(s)
+        else:
+            print(row)
+        i +=1
+        print(i)

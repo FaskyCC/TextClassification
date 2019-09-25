@@ -30,7 +30,7 @@ with open('./train.tsv', "w") as f:
         s = str(y_train[i][0])+'\t'+str(X_train[i])+'\n'
         f.write(s)
 
-with open('./test.tsv', "w") as f:
+with open('./test_all.tsv', "w") as f:
 # 【将训练集与数据集的数据分别保存为CSV文件】
     for i in range(len(X_test)):
         s = str(y_test[i][0])+'\t'+str(X_test[i])+'\n'

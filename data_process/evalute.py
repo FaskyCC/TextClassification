@@ -48,6 +48,8 @@ with open('./预测结果.csv','w') as f:
 recall = negative_predict/negative_all
 Acc_all = acc_all/num
 Acc_2 = acc_2/num
+F1 = 2*Acc_all*recall / (Acc_all+recall)
 print('准确率为:',Acc_all)
 print("判准率为", Acc_2)
 print('异常言论查全率:',recall)
+print('F1',F1)
